@@ -9,6 +9,7 @@
       <p>
         <span v-html="post.content"></span>
       </p>
+      <b-button @click="goBack">Go Back!</b-button>
     </b-jumbotron>
   </div>
 </template>
@@ -27,6 +28,11 @@ export default {
   data() {
     return {
       mainProps: { width: 1024, height: 400, class: 'm1' }
+    }
+  },
+  methods: {
+    goBack() {
+      return this.$router.go(-1)
     }
   }
 }
