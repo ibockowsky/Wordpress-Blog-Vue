@@ -2,7 +2,7 @@
 
 ## Project preview
 
-[Click me!](https://ibockowsky.github.io/Wordpress-Blog-Vue).
+[Click me!](https://ibockowsky.github.io/Wordpress-Blog-Vue)
 
 ## Project setup
 
@@ -27,7 +27,3 @@ npm run build
 ```
 npm run lint
 ```
-
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
