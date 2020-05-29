@@ -3,6 +3,8 @@ import VueRouter from 'vue-router'
 import Home from '@/views/Home.vue'
 import ShowPost from '@/views/ShowPost.vue'
 import store from '@/store/index.js'
+import NProgress from 'nprogress'
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -32,6 +34,15 @@ const routes = [
 
 const router = new VueRouter({
   routes
+})
+
+router.beforeEach((routeTo, routeFrom, next) => {
+  NProgress.start()
+  next()
+})
+
+router.afterEach(() => {
+  NProgress.done()
 })
 
 export default router
