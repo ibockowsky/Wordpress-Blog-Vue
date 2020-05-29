@@ -11,19 +11,22 @@
       </p>
       <b-button @click="goBack">Go Back!</b-button>
     </b-jumbotron>
+    <Comment v-for="comment in comments" :key="comment.ID" :comment="comment" />
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
+import Comment from '@/components/Comment.vue'
 export default {
   props: {
     post: {
       type: Object,
       required: true
-    },
-    comments: {
-      type: Object
     }
+  },
+  components: {
+    Comment
   },
   data() {
     return {
@@ -34,6 +37,9 @@ export default {
     goBack() {
       return this.$router.go(-1)
     }
+  },
+  computed: {
+    ...mapState(['comments'])
   }
 }
 </script>

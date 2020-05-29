@@ -56,8 +56,7 @@ export default new Vuex.Store({
     },
     getComments({ commit }, post_id) {
       return WordpressService.getComments(post_id).then(response => {
-        console.log(response.data.comments)
-        commit('SET_COMMENTS', response.data)
+        commit('SET_COMMENTS', response.data.comments)
         return response.data
       })
     }
