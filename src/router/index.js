@@ -12,7 +12,8 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home,
-    props: true
+    props: true,
+    meta: { scrollToTop: true }
   },
   {
     path: '/post/:slug',

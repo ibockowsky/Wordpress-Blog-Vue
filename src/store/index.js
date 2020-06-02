@@ -29,7 +29,7 @@ export default new Vuex.Store({
     getPosts({ state, commit }, { page }) {
       return WordpressService.getPosts(state.limit, page)
         .then(response => {
-          // console.log(response)
+          console.log(response)
           commit('SET_TOTAL_POSTS', response.data.found)
           commit('SET_POSTS', response.data.posts)
         })

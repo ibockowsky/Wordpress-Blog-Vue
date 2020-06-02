@@ -1,12 +1,17 @@
 <template>
   <div>
     <b-jumbotron>
-      <b-img v-bind="mainProps" :src="post.featured_image" rounded fluid></b-img>
+      <b-img
+        v-bind="mainProps"
+        :src="post.featured_image"
+        rounded
+        fluid
+      ></b-img>
       <template v-slot:header>{{ post.title }}</template>
 
       <hr class="my-4" />
 
-      <p>
+      <p class="text-left">
         <span v-html="post.content"></span>
       </p>
       <b-button @click="goBack">Go Back!</b-button>
