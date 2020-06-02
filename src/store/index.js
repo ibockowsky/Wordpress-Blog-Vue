@@ -29,7 +29,7 @@ export default new Vuex.Store({
     getPosts({ state, commit }, { page }) {
       return WordpressService.getPosts(state.limit, page)
         .then(response => {
-          console.log(response)
+          // console.log(response)
           commit('SET_TOTAL_POSTS', response.data.found)
           commit('SET_POSTS', response.data.posts)
         })
@@ -44,10 +44,12 @@ export default new Vuex.Store({
 
       if (post) {
         commit('SET_POST', post)
+        console.log(post)
         return post
       } else {
         return WordpressService.getPost(slug)
           .then(response => {
+            console.log(response)
             commit('SET_POST', response.data.posts[0])
             return response.data.posts[0]
           })

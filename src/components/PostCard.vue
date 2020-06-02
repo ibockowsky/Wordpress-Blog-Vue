@@ -3,7 +3,7 @@
     <b-card class="mb-2 mx-auto" style="max-width: 40rem;">
       <b-card-img
         :src="getPostImg(post.featured_image)"
-        class="card-img img-fluid"
+        class="card-img img-fluid "
       ></b-card-img>
       <h4 v-html="post.title"></h4>
       <b-card-text>

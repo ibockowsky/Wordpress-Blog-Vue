@@ -1,17 +1,15 @@
 <template>
-  <div>
-    <b-card class>
-      <b-media>
-        <template v-slot:aside>
-          <b-img :src="comment.author.avatar_URL" width="64"></b-img>
-        </template>
+  <div class="col-sm-3 mx-auto">
+    <b-media>
+      <template v-slot:aside>
+        <b-avatar variant="info" :src="comment.author.avatar_URL"></b-avatar>
+      </template>
 
-        <h5 class="mt-0">{{ comment.author.name }}</h5>
-        <p>
-          <span v-html="comment.content"></span>
-        </p>
-      </b-media>
-    </b-card>
+      <h5 class="mt-0">{{ comment.author.name }}</h5>
+      <p>
+        <span v-html="comment.content"></span>
+      </p>
+    </b-media>
   </div>
 </template>
 
