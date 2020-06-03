@@ -1,7 +1,7 @@
 <template>
   <div>
-    <b-img :src="post.featured_image" class="img-post" rounded></b-img>
-    <div class="post-title mx-auto">
+    <b-img :src="post.featured_image" class="img-post w-100" rounded></b-img>
+    <div class="col-sm-4 mx-auto">
       <blockquote class="blockquote">
         <h1 class="display-4 text-left">{{ post.title }}</h1>
         <footer
@@ -15,13 +15,13 @@
       </div>
       <hr class="my-4" />
     </div>
-    <div class="post-content mx-auto">
+    <div class="col-sm-5 mx-auto">
       <span v-html="post.content"></span>
     </div>
     <div class="d-flex flex-row-reverse p-3">
       <b-button @click="goBack">Go Back!</b-button>
     </div>
-    <div class="post-comments clear-fix ">
+    <div class="w-100 clear-fix ">
       <h1 class="display-5 text-center mt-5 mb-3">Comments:</h1>
       <Comment
         v-for="comment in comments"
@@ -35,6 +35,7 @@
 <script>
 import { mapState } from 'vuex'
 import Comment from '@/components/Comment.vue'
+import { scrollToTop } from '@/mixins/Helpers.js'
 export default {
   props: {
     post: {
@@ -44,6 +45,9 @@ export default {
   },
   components: {
     Comment
+  },
+  mounted() {
+    scrollToTop()
   },
   methods: {
     goBack() {
@@ -61,23 +65,10 @@ export default {
 
 <style>
 .img-post {
-  width: 100%;
   height: 50rem;
   object-fit: cover;
 }
-.post-title {
-  width: 50rem;
-}
 .post-author {
   color: #5f5f5f;
-}
-.post-content {
-  width: 70rem;
-}
-.post-button {
-  padding: 10px;
-}
-.post-comments {
-  width: 100%;
 }
 </style>

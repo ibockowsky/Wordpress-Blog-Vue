@@ -57,8 +57,4 @@ export default {
 .alignnone {
   display: none;
 }
-.jumbotron img {
-  max-width: 30rem;
-  max-height: 20rem;
-}
 </style>
