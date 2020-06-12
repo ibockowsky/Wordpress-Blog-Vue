@@ -24,11 +24,13 @@ const routes = [
       store
         .dispatch('getPost', routeTo.params.slug)
         .then(post => {
-          store.dispatch('getComments', post.ID).catch(err => console.log(err))
+          store
+            .dispatch('getComments', post.ID)
+            .catch(err => console.error(err))
           routeTo.params.post = post
           next()
         })
-        .catch(err => console.log(err))
+        .catch(err => console.error(err))
     }
   }
 ]
