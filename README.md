@@ -2,7 +2,7 @@
 
 ## Project preview
 
-[Click me!](https://limitless-waters-55885.herokuapp.com/)
+[Click me!](https://wordpressblogvue.herokuapp.com/)
 
 ## Project setup
 
