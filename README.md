@@ -2,7 +2,7 @@
 
 ## Project preview
 
-[Click me!](https://ibockowsky.github.io/Wordpress-Blog-Vue)
+[Click me!](https://limitless-waters-55885.herokuapp.com/)
 
 ## Project setup
 
